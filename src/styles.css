@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+body {
+  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+}
+h1 {
+  font-size: 130px;
+  color: #204051;
+  position: relative;
+  margin-left: 50px;
+  font-family: "Bebas Neue", cursive;
+}
+.date {
+  font-size: 30px;
+  position: relative;
+  margin-left: 50px;
+  color: #e7dfd5;
+  font-family: "Roboto", sans-serif;
+}
+.time {
+  font-size: 30px;
+  position: relative;
+  margin-left: 50px;
+  color: #e7dfd5;
+  font-family: "Roboto", sans-serif;
+}
+
+.description {
+  position: relative;
+  margin-left: 50px;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #e7dfd5;
+}
+.humidity {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  color: #e7dfd5;
+  margin-left: 50px;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+.windSpeed {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  color: #e7dfd5;
+  margin-left: 50px;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+button {
+  position: relative;
+  left: 1270px;
+  bottom: 400px;
+}
+input {
+  position: absolute;
+  right: 100px;
+  top: 50px;
+  width: 300px;
+  padding: 10px;
+}
+
+#submit-search {
+  position: absolute;
+  right: 20px;
+  top: 50px;
+  padding: 10px;
+  width: 80px;
+}
+#icon {
+  width: 200px;
+  position: relative;
+  left: 600px;
+  bottom: 80px;
+}
+.currentTemp {
+  bottom: 250px;
+  font-size: 100px;
+  margin-left: 600px;
+  position: relative;
+  bottom: 170px;
+}
+.tempUnit {
+  font-size: 50px;
+  position: relative;
+  margin-left: 760px;
+  bottom: 320px;
+}
+.row {
+  position: relative;
+  bottom: 5px;
+  height: 20px;
+  width: 1455px;
+}
+.col.d-flex.justify-content-center {
+  position: relative;
+  bottom: 200px;
+  margin-right: 10px;
+}
+
+.day-one {
+  text-align: center;
+  font-size: 30px;
+  color: #84a9ac;
+  padding: 10px;
+  transition: all 200ms ease-in-out;
+}
+.day-one:hover {
+  border: 2px solid;
+  opacity: 60%;
+}
+.footer {
+  color: grey;
+  text-align: right;
+  margin-right: 50px;
+}
+
+#celsius {
+  position: relative;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #0057b3;
+}

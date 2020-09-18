@@ -1,17 +1,31 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 
+import Header from "./Header";
+import Date from "./Date";
+import Time from "./Time";
+import Search from "./Search";
+import Description from "./Description";
+import WindSpeed from "./WindSpeed";
+import Humidity from "./Humidity";
+import CurrentTemp from "./CurrentTemp";
+import Forecast from "./Forecast";
+import Footer from "./Footer";
+
+const rootElement = document.getElementById("root");
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Header />
+    <Date />
+    <Time />
+    <Search />
+    <Description />
+    <WindSpeed />
+    <Humidity />
+    <CurrentTemp />
+    <Forecast />
+    <Footer />
   </React.StrictMode>,
-  document.getElementById('root')
+  rootElement
 );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
