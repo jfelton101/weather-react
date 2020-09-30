@@ -1,11 +1,7 @@
 import React from "react";
-import logo from "./logo.svg";
+import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 
 export default function App() {
-  return (
-    <div className="App">
-  Weather App
-    </div>
-  );
+  return <div className="App">Weather App</div>;
 }
