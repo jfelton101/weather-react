@@ -10,14 +10,7 @@ h1 {
   margin-left: 50px;
   font-family: "Bebas Neue", cursive;
 }
-.date {
-  font-size: 30px;
-  position: relative;
-  margin-left: 50px;
-  color: #e7dfd5;
-  font-family: "Roboto", sans-serif;
-}
-.time {
+.currentDate {
   font-size: 30px;
   position: relative;
   margin-left: 50px;
@@ -53,7 +46,7 @@ button {
   left: 1270px;
   bottom: 400px;
 }
-input {
+.submit-search {
   position: absolute;
   right: 100px;
   top: 50px;
