@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import DateTime from "./DateTime";
+import WeatherIcon from "./WeatherIcon"
+import TempConversion from "./TempConversion"
 import "./styles.css";
 
 export default function WeatherInfo(props) {
@@ -15,7 +17,7 @@ export default function WeatherInfo(props) {
       date: new Date(response.data.dt * 1000),
       temperature: Math.round(response.data.main.temp),
       description: response.data.weather[0].description,
-      iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
       wind: Math.round(response.data.wind.speed),
       humidity: Math.round(response.data.main.humidity),
     });
@@ -38,39 +40,34 @@ export default function WeatherInfo(props) {
 
   if (weatherData.ready) {
     return (
-    
       <div className="weatherInfo">
         <h1>{weatherData.city}</h1>
 
-        <DateTime date={weatherData.date}/>
+        <DateTime date={weatherData.date} />
 
         <p id="description">{weatherData.description}</p>
         <p id="humidity">Humidity: {weatherData.humidity}%</p>
         <p id="wind-speed"> Wind Speed: {weatherData.wind} km/h</p>
-        <img src={weatherData.iconUrl} id="icon" alt="weather" />
-        <p className="currentTemp">{weatherData.temperature}</p>
-        <span className="tempUnit">
-          <a href="/" id="fahrenheit">
-            °F{" "}
-          </a>{" "}
-          |{" "}
-          <a href="/" id="celsius">
-            °C
-          </a>
-        </span>
+
+        <div className="float-left">
+          <WeatherIcon code={weatherData.icon} />
+        </div>
+        
+      
+        <TempConversion fahrenheit={weatherData.temperature}/>
+      
 
         <form className="search-form" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          id="search-city"
-          placeholder="Search city..."
-          autoFocus="on"
-          onChange={handleCityChange}
-        />
-        <input type="submit" value="Search" id="submit-search" />
-      </form>
-      <button>Get Current Location</button>
-
+          <input
+            type="text"
+            id="search-city"
+            placeholder="Search city..."
+            autoFocus="on"
+            onChange={handleCityChange}
+          />
+          <input type="submit" value="Search" id="submit-search" />
+        </form>
+        <button>Get Current Location</button>
       </div>
     );
   } else {
