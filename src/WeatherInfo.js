@@ -3,6 +3,7 @@ import axios from "axios";
 import DateTime from "./DateTime";
 import WeatherIcon from "./WeatherIcon"
 import TempConversion from "./TempConversion"
+import Forecast from "./Forecast"
 import "./styles.css";
 
 export default function WeatherInfo(props) {
@@ -55,7 +56,7 @@ export default function WeatherInfo(props) {
         
       
         <TempConversion fahrenheit={weatherData.temperature}/>
-      
+      <Forecast city={weatherData.city}/>
 
         <form className="search-form" onSubmit={handleSubmit}>
           <input

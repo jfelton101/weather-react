@@ -16,6 +16,7 @@ h1 {
   margin-left: 50px;
   color: #e7dfd5;
   font-family: "Roboto", sans-serif;
+  bottom: 30px;
 }
 
 #description {
@@ -24,6 +25,7 @@ h1 {
   font-size: 30px;
   text-transform: uppercase;
   color: #e7dfd5;
+  bottom: 40px;
 }
 #humidity {
   position: relative;
@@ -32,6 +34,7 @@ h1 {
   margin-left: 50px;
   text-transform: uppercase;
   font-size: 30px;
+  bottom: 60px;
 }
 #wind-speed {
   position: relative;
@@ -40,11 +43,12 @@ h1 {
   margin-left: 50px;
   text-transform: uppercase;
   font-size: 30px;
+  bottom: 80px;
 }
 button {
   position: relative;
-  left: 1270px;
-  bottom: 1px;
+  left: 1255px;
+  bottom: 580px;
 }
 #search-city {
   position: absolute;
@@ -64,21 +68,20 @@ button {
 .float-left {
   width: 200px;
   position: relative;
-  left: 600px;
-  bottom: 80px;
+  left: 700px;
+  bottom: 150px;
 }
 .currentTemp {
-  bottom: 250px;
   font-size: 100px;
   margin-left: 600px;
   position: relative;
-  bottom: 170px;
+  bottom: 80px;
 }
 .tempUnit {
   font-size: 50px;
   position: relative;
   margin-left: 760px;
-  bottom: 320px;
+  bottom: 220px;
 }
 .row {
   position: relative;
@@ -86,25 +89,9 @@ button {
   height: 20px;
   width: 1455px;
 }
-.col.d-flex.justify-content-center {
-  position: relative;
-  bottom: 200px;
-  margin-right: 10px;
-}
 
-.day-one {
-  text-align: center;
-  font-size: 30px;
-  color: #84a9ac;
-  padding: 10px;
-  transition: all 200ms ease-in-out;
-}
-.day-one:hover {
-  border: 2px solid;
-  opacity: 60%;
-}
 .footer {
-  color: grey;
+  color: white;
   text-align: right;
   margin-right: 50px;
 }
@@ -123,3 +110,18 @@ a:hover {
   text-decoration: none;
   color: #0057b3;
 }
+.forecast {
+    text-align: center;
+    font-size: 30px;
+    color: #84a9ac;
+    padding: 10px;
+    transition: all 200ms ease-in-out;
+    bottom: 160px;
+    font-weight: bold;
+}
+.forecast canvas {
+  display: block;
+  margin: 5px auto;
+}
+
+
