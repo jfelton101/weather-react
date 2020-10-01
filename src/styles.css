@@ -44,9 +44,9 @@ h1 {
 button {
   position: relative;
   left: 1270px;
-  bottom: 400px;
+  bottom: 1px;
 }
-.submit-search {
+#search-city {
   position: absolute;
   right: 100px;
   top: 50px;
