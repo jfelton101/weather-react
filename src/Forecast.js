@@ -22,6 +22,7 @@ export default function Forecast(props) {
           <ForecastPreview data={forecast.list[2]} />{" "}
         <ForecastPreview data={forecast.list[3]} /> 
         <ForecastPreview data={forecast.list[5]} /> 
+        <ForecastPreview data={forecast.list[6]} /> 
       </div>
     );
   } else {
