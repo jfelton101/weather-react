@@ -26,7 +26,7 @@ export default function WeatherInfo(props) {
 
   function search() {
   const apiKey = "1a83008090457b4fd7f896351fa948c0";
-  let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(handleResponse);
 }
 
@@ -39,10 +39,24 @@ export default function WeatherInfo(props) {
     setCity(event.target.value);
   }
 
+  function retrievePosition(position) {
+    let apiKey = "1a83008090457b4fd7f896351fa948c0";
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
+
+    axios.get(url).then(handleResponse);
+  }
+
+  function getPosition(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(retrievePosition);
+  }
+
   if (weatherData.ready) {
     return (
       <div className="weatherInfo">
-        <h1>{weatherData.city}</h1>
+        <h1 className="header">{weatherData.city}</h1>
 
         <DateTime date={weatherData.date} />
 
@@ -68,7 +82,7 @@ export default function WeatherInfo(props) {
           />
           <input type="submit" value="Search" id="submit-search" />
         </form>
-        <button>Get Current Location</button>
+        <button onClick={getPosition}>Get Current Location</button>
       </div>
     );
   } else {
