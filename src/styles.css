@@ -48,7 +48,7 @@ h1 {
 button {
   position: relative;
   left: 1255px;
-  bottom: 580px;
+  bottom: 620px;
 }
 #search-city {
   position: absolute;
@@ -94,6 +94,7 @@ button {
   color: white;
   text-align: right;
   margin-right: 50px;
+  margin-top: 60px;
 }
 
 #celsius {
@@ -111,19 +112,27 @@ a:hover {
   color: #0057b3;
 }
 .forecast {
-    text-align: center;
-    font-size: 30px;
-    color: #84a9ac;
-    padding: 10px;
-    transition: all 200ms ease-in-out;
-    bottom: 160px;
-    font-weight: bold;
+  text-align: center;
+  font-size: 30px;
+  color: #84a9ac;
+  padding: 10px;
+  bottom: 160px;
+  font-weight: bold;
+  margin: 10px auto;
 }
 .forecast canvas {
   display: block;
   margin: 5px auto;
 }
 
+.forecast.row {
+  margin: 5px auto;
+}
+.ForecastPreview.col:hover {
+  border: 2px solid;
+  opacity: 60%;
+  transition: all 200ms ease-in-out;
+}
 .header {
   font-size: 150px;
 }
